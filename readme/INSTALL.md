@@ -39,7 +39,10 @@ After install Anaconda:
     # COCOAPI=/path/to/clone/cocoapi
     git clone https://github.com/cocodataset/cocoapi.git $COCOAPI
     cd $COCOAPI/PythonAPI
+    pip install cython
+    edit Makefile: python -> python3
     make
+    python -m pip install -U matplotlib
     python setup.py install --user
     ~~~
 
